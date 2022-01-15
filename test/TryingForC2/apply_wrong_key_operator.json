@@ -1,0 +1,28 @@
+{
+    "title": "APPLY wrong key for operator",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "Avg"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["Avg"]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_title"],
+            "APPLY": [
+                {"Avg": {"AVG": "courses_instructor"}}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

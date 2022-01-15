@@ -1,0 +1,27 @@
+{
+    "title": "sumSeats",
+    "query": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_address",
+                "totalSeats"
+            ],
+            "ORDER": "rooms_address"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_address"
+            ],
+            "APPLY": [
+                {
+                    "totalSeats": {
+                        "SUM": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_address":"1822 East Mall","totalSeats":228},{"rooms_address":"1866 Main Mall","totalSeats":3190},{"rooms_address":"1874 East Mall","totalSeats":94},{"rooms_address":"1924 West Mall","totalSeats":41},{"rooms_address":"1961 East Mall V6T 1Z1","totalSeats":568},{"rooms_address":"1984 Mathematics Road","totalSeats":495},{"rooms_address":"1984 West Mall","totalSeats":619},{"rooms_address":"1986 Mathematics Road","totalSeats":106},{"rooms_address":"2036 Main Mall","totalSeats":913},{"rooms_address":"2045 East Mall","totalSeats":537},{"rooms_address":"2053 Main Mall","totalSeats":1546},{"rooms_address":"2080 West Mall","totalSeats":201},{"rooms_address":"2125 Main Mall","totalSeats":1004},{"rooms_address":"2175 West Mall V6T 1Z4","totalSeats":1421},{"rooms_address":"2177 Wesbrook Mall V6T 1Z3","totalSeats":160},{"rooms_address":"2194 Health Sciences Mall","totalSeats":1297},{"rooms_address":"2202 Main Mall","totalSeats":144},{"rooms_address":"2205 East Mall","totalSeats":263},{"rooms_address":"2206 East Mall","totalSeats":166},{"rooms_address":"2207 Main Mall","totalSeats":580},{"rooms_address":"2260 West Mall, V6T 1Z4","totalSeats":426},{"rooms_address":"2350 Health Sciences Mall","totalSeats":825},{"rooms_address":"2356 Main Mall","totalSeats":503},{"rooms_address":"2357 Main Mall","totalSeats":573},{"rooms_address":"2360 East Mall V6T 1Z3","totalSeats":354},{"rooms_address":"2405 Wesbrook Mall","totalSeats":538},{"rooms_address":"2424 Main Mall","totalSeats":621},{"rooms_address":"6000 Iona Drive","totalSeats":150},{"rooms_address":"6000 Student Union Blvd","totalSeats":897},{"rooms_address":"6081 University Blvd","totalSeats":65},{"rooms_address":"6108 Thunderbird Boulevard","totalSeats":521},{"rooms_address":"6174 University Boulevard","totalSeats":427},{"rooms_address":"6224 Agricultural Road","totalSeats":658},{"rooms_address":"6245 Agronomy Road V6T 1Z4","totalSeats":440},{"rooms_address":"6250 Applied Science Lane","totalSeats":289},{"rooms_address":"6270 University Boulevard","totalSeats":336},{"rooms_address":"6303 North West Marine Drive","totalSeats":186},{"rooms_address":"6331 Crescent Road V6T 1Z1","totalSeats":163},{"rooms_address":"6333 Memorial Road","totalSeats":325},{"rooms_address":"6339 Stores Road","totalSeats":50},{"rooms_address":"6350 Stores Road","totalSeats":142},{"rooms_address":"6356 Agricultural Road","totalSeats":505},{"rooms_address":"6363 Agronomy Road","totalSeats":662},{"rooms_address":"6445 University Boulevard","totalSeats":240}]
+}

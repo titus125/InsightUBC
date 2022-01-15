@@ -1,0 +1,30 @@
+{
+    "title": "overallAvg",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_title": "*appl*"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallAvg"
+            ],
+            "ORDER": "overallAvg"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_title":"appl linear algb","overallAvg":69.21},{"courses_title":"applied analysis","overallAvg":70.31},{"courses_title":"appl nonln dy&ch","overallAvg":71.24},{"courses_title":"applied dev psyc","overallAvg":71.62},{"courses_title":"appl thermody ii","overallAvg":71.74},{"courses_title":"appl stat in bus","overallAvg":72.55},{"courses_title":"appl el & elmech","overallAvg":72.72},{"courses_title":"elem stat applic","overallAvg":73.11},{"courses_title":"int stats applic","overallAvg":73.32},{"courses_title":"appl clscl mech","overallAvg":73.51},{"courses_title":"appld nuclr phys","overallAvg":76.87},{"courses_title":"appl mech matrls","overallAvg":76.98},{"courses_title":"mkt applications","overallAvg":78.02},{"courses_title":"appl fin mrkt","overallAvg":78.21},{"courses_title":"appld econometrc","overallAvg":79.53},{"courses_title":"applied econ","overallAvg":79.61},{"courses_title":"appld anml behav","overallAvg":80.04},{"courses_title":"appld proj mgmt","overallAvg":80.88},{"courses_title":"appld pharmacolg","overallAvg":81.05},{"courses_title":"tpcs appl biolgy","overallAvg":81.77},{"courses_title":"appl discret opt","overallAvg":82.77},{"courses_title":"appl geophysics","overallAvg":83.03},{"courses_title":"appl epid mthds","overallAvg":85.33},{"courses_title":"semicon thy appl","overallAvg":86.22},{"courses_title":"adv appl clin ph","overallAvg":86.38},{"courses_title":"appl heterog cat","overallAvg":87.08},{"courses_title":"cur iss appl ntr","overallAvg":87.11},{"courses_title":"appl lear theor","overallAvg":87.83},{"courses_title":"appl hlth serv","overallAvg":90.04}]}

@@ -1,0 +1,23 @@
+{
+    "title": "APPLY no keys",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_title"],
+            "APPLY": [
+                {}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

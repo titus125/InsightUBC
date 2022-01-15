@@ -1,0 +1,29 @@
+{
+    "title": "APPLY not unique",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "Avg"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["Avg"]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_title"],
+            "APPLY": [
+                {"Avg": {"AVG": "courses_avg"}},
+                {"Avg": {"SUM": "courses_number"}}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,38 @@
+{
+    "title": "Wildcard cases",
+    "query": {
+	  "WHERE": {
+		"AND": [
+		  {
+			"IS": {
+			  "courses_title": "*e &*"
+			}
+		  },
+		  {
+			"NOT": {
+			  "IS": {
+				"courses_instructor": ""
+			  }
+			}
+		  },
+		  {
+			"LT": {
+			  "courses_avg": 73
+			}
+		  }
+		]
+	  },
+	  "OPTIONS": {
+		"COLUMNS": [
+		  "courses_dept",
+		  "courses_id",
+		  "courses_instructor",
+		  "courses_title",
+		  "courses_uuid",
+		  "courses_avg"
+		]
+	  }
+	},
+    "isQueryValid": true,
+	"result":[{"courses_dept":"anth","courses_id":"217","courses_instructor":"gessner, suzanne","courses_title":"culture & commnc","courses_uuid":"12184","courses_avg":70.11},{"courses_dept":"anth","courses_id":"217","courses_instructor":"moore, patrick","courses_title":"culture & commnc","courses_uuid":"13164","courses_avg":72.91},{"courses_dept":"anth","courses_id":"217","courses_instructor":"moore, patrick","courses_title":"culture & commnc","courses_uuid":"25166","courses_avg":72.47},{"courses_dept":"anth","courses_id":"217","courses_instructor":"gessner, suzanne","courses_title":"culture & commnc","courses_uuid":"59924","courses_avg":71.56},{"courses_dept":"educ","courses_id":"172","courses_instructor":"james, kedrick","courses_title":"language & curr","courses_uuid":"14415","courses_avg":69},{"courses_dept":"educ","courses_id":"172","courses_instructor":"james, kedrick","courses_title":"language & curr","courses_uuid":"50477","courses_avg":39.03},{"courses_dept":"eosc","courses_id":"222","courses_instructor":"smith, paul laurence","courses_title":"geo time & strat","courses_uuid":"45970","courses_avg":72.71},{"courses_dept":"hist","courses_id":"260","courses_instructor":"kojevnikov, alexei","courses_title":"scie & society","courses_uuid":"29499","courses_avg":72.26},{"courses_dept":"hist","courses_id":"260","courses_instructor":"brain, robert","courses_title":"scie & society","courses_uuid":"85403","courses_avg":71.58},{"courses_dept":"hist","courses_id":"260","courses_instructor":"brain, robert","courses_title":"scie & society","courses_uuid":"95975","courses_avg":72.77}]
+}	

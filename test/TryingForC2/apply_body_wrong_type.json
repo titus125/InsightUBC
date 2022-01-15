@@ -1,0 +1,24 @@
+{
+    "title": "APPLY body wrong type",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+		"Avg"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_title"],
+            "APPLY": [
+                {"Avg": {"AVG": 1111}}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

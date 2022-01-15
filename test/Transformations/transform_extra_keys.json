@@ -1,0 +1,32 @@
+{
+    "title": "TRANSFORMATIONS extra key",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+              	"Avg",
+              	"Max"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["courses_dept"]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept", "courses_id"],
+            "APPLY": [
+                {"Avg": {"AVG": "courses_avg"}},
+                {"Max": {"MAX": "courses_avg"}}
+            ],
+            "WRONG": "wrong"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

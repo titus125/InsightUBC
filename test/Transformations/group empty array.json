@@ -1,0 +1,29 @@
+{
+    "title": "GROUP empty array",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "Avg",
+                "Max"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["Avg"]}
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [],
+            "APPLY": [
+                {"Avg": {"AVG": "courses_avg"}},
+                {"Max": {"MAX": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

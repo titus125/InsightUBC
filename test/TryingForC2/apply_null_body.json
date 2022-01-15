@@ -1,0 +1,24 @@
+{
+    "title": "APPLY null body",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+		"Avg"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_title"],
+            "APPLY": [
+                {"Avg": null}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

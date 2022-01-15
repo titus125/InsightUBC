@@ -1,0 +1,25 @@
+{
+    "title": "TRANSFORMATIONS null",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+              	"Avg",
+              	"Max"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["courses_dept"]
+            }
+        },
+        "TRANSFORMATIONS": null
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

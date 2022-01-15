@@ -1,0 +1,32 @@
+{
+    "title": "TRANSFORMATIONS columns reference multiple",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+              	"Avg",
+              	"Max",
+		"courses2_id"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["courses_dept"]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept", "courses_id"],
+            "APPLY": [
+                {"Avg": {"AVG": "courses_avg"}},
+                {"Max": {"MAX": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

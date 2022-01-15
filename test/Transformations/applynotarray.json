@@ -1,0 +1,26 @@
+{
+    "title": "APPLY not array",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["courses_dept"]
+	    }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept", "courses_id"],
+            "APPLY": "hi"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

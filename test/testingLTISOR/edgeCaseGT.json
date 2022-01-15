@@ -1,0 +1,29 @@
+{
+    "title": "Edge case GT",
+    "query": {
+	  "WHERE": {
+		"AND": [
+		  {
+			"GT": {
+			  "courses_avg": 98
+			}
+		  },
+		  {
+			"GT": {
+			  "courses_year": 2009
+			}
+		  }
+		]
+	  },
+	  "OPTIONS": {
+		"COLUMNS": [
+		  "courses_dept",
+		  "courses_id",
+		  "courses_avg",
+		  "courses_year"
+		]
+	  }
+	},
+    "isQueryValid": true,
+    "result":[{"courses_dept":"cnps","courses_id":"574","courses_avg":99.19,"courses_year":2012},{"courses_dept":"epse","courses_id":"449","courses_avg":98.8,"courses_year":2014},{"courses_dept":"epse","courses_id":"449","courses_avg":98.58,"courses_year":2012},{"courses_dept":"epse","courses_id":"449","courses_avg":98.76,"courses_year":2012},{"courses_dept":"epse","courses_id":"519","courses_avg":98.45,"courses_year":2011},{"courses_dept":"nurs","courses_id":"509","courses_avg":98.71,"courses_year":2011},{"courses_dept":"nurs","courses_id":"509","courses_avg":98.21,"courses_year":2015},{"courses_dept":"nurs","courses_id":"578","courses_avg":98.5,"courses_year":2013},{"courses_dept":"nurs","courses_id":"578","courses_avg":98.58,"courses_year":2010},{"courses_dept":"spph","courses_id":"300","courses_avg":98.98,"courses_year":2015}]
+}

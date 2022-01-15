@@ -1,0 +1,23 @@
+{
+    "title": "APPLY empty key",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_title"],
+            "APPLY": [
+                {"": {"AVG": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,30 @@
+{
+    "title": "GROUP key not string",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "Avg",
+                "Max"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["Avg"]}
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_title", 100, "courses_id_uuid"],
+            "APPLY": [
+                {"Avg": {"AVG": "courses_avg"}},
+                {"Max": {"MAX": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}
+

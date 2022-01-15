@@ -1,0 +1,27 @@
+{
+    "title": "maxSeats",
+    "query": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_address",
+                "largestRoom"
+            ],
+            "ORDER": "rooms_address"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_address"
+            ],
+            "APPLY": [
+                {
+                    "largestRoom": {
+                        "MAX": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_address":"1822 East Mall","largestRoom":94},{"rooms_address":"1866 Main Mall","largestRoom":275},{"rooms_address":"1874 East Mall","largestRoom":70},{"rooms_address":"1924 West Mall","largestRoom":21},{"rooms_address":"1961 East Mall V6T 1Z1","largestRoom":154},{"rooms_address":"1984 Mathematics Road","largestRoom":224},{"rooms_address":"1984 West Mall","largestRoom":225},{"rooms_address":"1986 Mathematics Road","largestRoom":106},{"rooms_address":"2036 Main Mall","largestRoom":265},{"rooms_address":"2045 East Mall","largestRoom":375},{"rooms_address":"2053 Main Mall","largestRoom":260},{"rooms_address":"2080 West Mall","largestRoom":68},{"rooms_address":"2125 Main Mall","largestRoom":280},{"rooms_address":"2175 West Mall V6T 1Z4","largestRoom":190},{"rooms_address":"2177 Wesbrook Mall V6T 1Z3","largestRoom":160},{"rooms_address":"2194 Health Sciences Mall","largestRoom":503},{"rooms_address":"2202 Main Mall","largestRoom":144},{"rooms_address":"2205 East Mall","largestRoom":99},{"rooms_address":"2206 East Mall","largestRoom":66},{"rooms_address":"2207 Main Mall","largestRoom":350},{"rooms_address":"2260 West Mall, V6T 1Z4","largestRoom":426},{"rooms_address":"2350 Health Sciences Mall","largestRoom":350},{"rooms_address":"2356 Main Mall","largestRoom":136},{"rooms_address":"2357 Main Mall","largestRoom":200},{"rooms_address":"2360 East Mall V6T 1Z3","largestRoom":200},{"rooms_address":"2405 Wesbrook Mall","largestRoom":236},{"rooms_address":"2424 Main Mall","largestRoom":250},{"rooms_address":"6000 Iona Drive","largestRoom":100},{"rooms_address":"6000 Student Union Blvd","largestRoom":299},{"rooms_address":"6081 University Blvd","largestRoom":40},{"rooms_address":"6108 Thunderbird Boulevard","largestRoom":442},{"rooms_address":"6174 University Boulevard","largestRoom":325},{"rooms_address":"6224 Agricultural Road","largestRoom":257},{"rooms_address":"6245 Agronomy Road V6T 1Z4","largestRoom":160},{"rooms_address":"6250 Applied Science Lane","largestRoom":100},{"rooms_address":"6270 University Boulevard","largestRoom":228},{"rooms_address":"6303 North West Marine Drive","largestRoom":90},{"rooms_address":"6331 Crescent Road V6T 1Z1","largestRoom":55},{"rooms_address":"6333 Memorial Road","largestRoom":94},{"rooms_address":"6339 Stores Road","largestRoom":50},{"rooms_address":"6350 Stores Road","largestRoom":63},{"rooms_address":"6356 Agricultural Road","largestRoom":205},{"rooms_address":"6363 Agronomy Road","largestRoom":72},{"rooms_address":"6445 University Boulevard","largestRoom":40}]
+}

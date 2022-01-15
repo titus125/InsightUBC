@@ -1,0 +1,30 @@
+{
+    "title": "APPLY multiple keys",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "Avg"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["Avg"]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_title"],
+            "APPLY": [
+                {"Avg": {"AVG": "courses_avg"},
+		 "Sum": {"SUM": "courses_avg"}},
+                {"Max": {"MAX": "courses_avg"}}
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}
