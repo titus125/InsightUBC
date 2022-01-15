@@ -1,0 +1,45 @@
+{
+    "title": "testing order with instructor",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 69
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_instructor",
+                "courses_avg"
+            ],
+            "ORDER": "courses_instructor"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_instructor": "palacios, carolina",
+            "courses_avg": 67.5
+        },
+        {
+            "courses_instructor": "palacios, carolina",
+            "courses_avg": 68.89
+        },
+        {
+            "courses_instructor": "palacios, carolina",
+            "courses_avg": 68.29
+        },
+        {
+            "courses_instructor": "smulders, dave",
+            "courses_avg": 67.95
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "title": "No order",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 68
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_fail",
+                "courses_avg"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_fail": 1,
+            "courses_avg": 67.5
+        },
+        {
+            "courses_fail": 3,
+            "courses_avg": 67.95
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "title": "testing order with pass",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 69
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_pass"
+            ],
+            "ORDER": "courses_pass"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_pass": 15
+        },
+        {
+            "courses_pass": 19
+        },
+        {
+            "courses_pass": 19
+        },
+        {
+            "courses_pass": 25
+        }
+    ]
+}

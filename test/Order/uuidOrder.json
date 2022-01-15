@@ -1,0 +1,40 @@
+{
+    "title": "testing order with uuid",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 69
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_uuid"
+            ],
+            "ORDER": "courses_uuid"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_uuid": "36027"
+        },
+        {
+            "courses_uuid": "62725"
+        },
+        {
+            "courses_uuid": "68553"
+        },
+        {
+            "courses_uuid": "91928"
+        }
+    ]
+}

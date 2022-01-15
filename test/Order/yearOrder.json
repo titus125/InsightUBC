@@ -1,0 +1,40 @@
+{
+    "title": "testing order with year",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 69
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_year"
+            ],
+            "ORDER": "courses_year"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_year": 2013
+        },
+        {
+            "courses_year": 2014
+        },
+        {
+            "courses_year": 2014
+        },
+        {
+            "courses_year": 2015
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "title": "testing order with id",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 68
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_id"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_id": "329",
+            "courses_avg": 67.5
+        },
+        {
+            "courses_id": "329",
+            "courses_avg": 67.95
+        }
+    ]
+}

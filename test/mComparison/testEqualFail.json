@@ -1,0 +1,32 @@
+{
+    "title": "testing EQ fail",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_fail": 110
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_dept": "math",
+            "courses_avg": 66.09
+        },
+        {
+            "courses_dept": "phys",
+            "courses_avg": 67.5
+        },
+        {
+            "courses_dept": "biol",
+            "courses_avg": 68.22
+        }
+    ]
+}

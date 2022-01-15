@@ -1,0 +1,19 @@
+{
+    "title": "invalid courses_year key",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_year":"2018"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

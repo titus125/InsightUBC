@@ -1,0 +1,20 @@
+{
+    "title": "invalid sKey",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 5,
+                "courses_pass": 6
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

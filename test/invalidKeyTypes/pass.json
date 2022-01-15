@@ -1,0 +1,19 @@
+{
+    "title": "invalid courses_pass key",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_pass":"10"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

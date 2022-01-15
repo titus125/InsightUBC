@@ -1,0 +1,28 @@
+{
+    "title": "more than one key",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 68
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_fail",
+                "courses_avg"
+            ],
+            "ORDER": ["courses_fail", "courses_avg"]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

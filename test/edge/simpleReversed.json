@@ -1,0 +1,24 @@
+{
+    "title": "reversed",
+    "query": {
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        },
+        "WHERE": {
+            "EQ": {
+                "courses_audit": 20
+            }
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_dept": "rhsc",
+            "courses_avg": 87.26
+        }
+    ]
+}

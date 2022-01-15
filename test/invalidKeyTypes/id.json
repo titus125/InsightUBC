@@ -1,0 +1,19 @@
+{
+    "title": "invalid courses_audit key",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_id":100
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

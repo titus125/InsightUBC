@@ -1,0 +1,24 @@
+{
+    "title": "testing EQ pass",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_pass": 400
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_dept": "fren",
+            "courses_avg": 73.51
+        }
+    ]
+}

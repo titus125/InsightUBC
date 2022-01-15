@@ -1,0 +1,19 @@
+{
+    "title": "sKey as mKey",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_dept":10
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

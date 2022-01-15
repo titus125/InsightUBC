@@ -1,0 +1,19 @@
+{
+    "title": "invalid courses_uuid key",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_uuid":"1"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

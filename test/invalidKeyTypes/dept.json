@@ -1,0 +1,19 @@
+{
+    "title": "invalid courses_dept key",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_dept":1
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

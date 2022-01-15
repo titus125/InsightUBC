@@ -1,0 +1,32 @@
+{
+    "title": "testing order with audit",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_audit",
+                "courses_avg"
+            ],
+            "ORDER": "courses_audit"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_audit": 0,
+            "courses_avg": 97
+        },
+        {
+            "courses_audit": 0,
+            "courses_avg": 97
+        },
+        {
+            "courses_audit": 0,
+            "courses_avg": 97
+        }
+    ]
+}

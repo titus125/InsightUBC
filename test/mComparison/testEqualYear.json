@@ -1,0 +1,19 @@
+{
+    "title": "testing EQ year",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_year": 400
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": []
+}

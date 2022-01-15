@@ -1,0 +1,45 @@
+{
+    "title": "3 filters for logic",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 90
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                },
+                {
+                    "LT": {
+                        "courses_avg": 90.5
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_avg": 90.02
+        },
+        {
+            "courses_avg": 90.16
+        },
+        {
+            "courses_avg": 90.17
+        },
+        {
+            "courses_avg": 90.18
+        }
+    ]
+}

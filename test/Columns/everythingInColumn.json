@@ -1,0 +1,58 @@
+{
+    "title": "test every possible thing in column",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 85
+                            }
+                        },
+                        {
+                            "LT": {
+                                "courses_avg": 85.3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "IS": {
+                        "courses_uuid": "91454"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_dept",
+                "courses_id",
+                "courses_instructor",
+                "courses_title",
+                "courses_pass",
+                "courses_fail",
+                "courses_audit",
+                "courses_uuid",
+                "courses_year"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_avg": 85.25,
+            "courses_dept": "russ",
+            "courses_id": "300",
+            "courses_instructor": "habajova, irina",
+            "courses_title": "third-year russ",
+            "courses_pass": 12,
+            "courses_fail": 0,
+            "courses_audit": 0,
+            "courses_uuid": "91454",
+            "courses_year": 2015
+        }
+    ]
+}
