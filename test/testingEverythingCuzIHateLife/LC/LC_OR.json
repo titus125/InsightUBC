@@ -1,0 +1,46 @@
+{
+    "title": "LC into AND",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "OR": [
+                        {
+                            "GT": {
+                                "courses_avg": 99
+                            }
+                        },
+                        {
+                            "LT": {
+                                "courses_avg": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 99.5
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_avg": 99.19
+        },
+        {
+            "courses_avg": 99.78
+        },
+        {
+            "courses_avg": 99.78
+        }
+    ]
+}

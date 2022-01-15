@@ -1,0 +1,38 @@
+{
+    "title": "LC into NOT",
+    "query": {
+        "WHERE": {
+            "NOT":{
+                "OR": [
+                    {
+                        "AND": [
+                            {
+                                "IS": {
+                                    "courses_dept": "math"
+                                }
+                            },
+                            {
+                                "LT": {
+                                    "courses_avg": 1
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "EQ": {
+                            "courses_avg": 99.5
+                        }
+                    }
+                ]
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "ResultTooLargeError"
+}

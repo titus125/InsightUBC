@@ -1,0 +1,19 @@
+{
+    "title": "key not in columns",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_audit":"1"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_audit"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

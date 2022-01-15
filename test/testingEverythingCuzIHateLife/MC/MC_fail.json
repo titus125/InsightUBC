@@ -1,0 +1,24 @@
+{
+    "title": "MC into fail",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_fail": 280
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_dept": "chem",
+            "courses_avg": 68.2
+        }
+    ]
+}

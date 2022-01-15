@@ -1,0 +1,19 @@
+{
+    "title": "ID not yet added",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "ubc_dept":"1"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "ubc_avg"
+            ],
+            "ORDER": "ubc_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

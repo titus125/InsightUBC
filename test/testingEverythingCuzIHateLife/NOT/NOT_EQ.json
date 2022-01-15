@@ -1,0 +1,32 @@
+{
+    "title": "NOT into EQ",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "NOT":
+                    {
+                        "EQ": {
+                            "courses_avg": 90
+                        }
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 95
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "ResultTooLargeError"
+}

@@ -1,0 +1,19 @@
+{
+    "title": "different IDs",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "sample1_audit":"1"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "sample1_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

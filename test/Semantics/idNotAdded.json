@@ -1,0 +1,19 @@
+{
+    "title": "sample2 not added",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "sample2_audit": 20
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "sample2_dept",
+                "sample2_avg"
+            ],
+            "ORDER": "sample2_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

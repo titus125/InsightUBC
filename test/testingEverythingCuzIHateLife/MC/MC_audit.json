@@ -1,0 +1,20 @@
+{
+    "title": "MC into audit",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_audit": 999
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+    ]
+}

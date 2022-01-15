@@ -1,0 +1,30 @@
+{
+    "title": "Course key in rooms filter",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "rooms_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_address",
+                "distinctFurniture"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_address"
+            ],
+            "APPLY": [
+                {
+                    "distinctFurniture": {
+                        "COUNT": "rooms_furniture"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

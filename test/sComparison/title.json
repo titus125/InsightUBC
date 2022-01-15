@@ -1,0 +1,40 @@
+{
+    "title": "test courses_title",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 85
+                            }
+                        },
+                        {
+                            "LT": {
+                                "courses_avg": 86
+                            }
+                        }
+                    ]
+                },
+                {
+                    "IS": {
+                        "courses_instructor": "grant, edward"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title"
+            ],
+            "ORDER": "courses_title"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_title": "communcting chem"
+        }
+    ]
+}

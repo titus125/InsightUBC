@@ -1,0 +1,40 @@
+{
+    "title": "columns into instructor",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 85
+                            }
+                        },
+                        {
+                            "LT": {
+                                "courses_avg": 85.3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "IS": {
+                        "courses_uuid": "91454"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_instructor"
+            ],
+            "ORDER": "courses_instructor"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_instructor": "habajova, irina"
+        }
+    ]
+}

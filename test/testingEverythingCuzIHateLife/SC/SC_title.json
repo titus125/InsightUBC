@@ -1,0 +1,19 @@
+{
+    "title": "SC into title",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_title": "*a*"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "ResultTooLargeError"
+}

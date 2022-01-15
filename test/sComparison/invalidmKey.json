@@ -1,0 +1,19 @@
+{
+    "title": "invalid mKey",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_fail": "math"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+
+    "isQueryValid": false,
+    "result": "InsightError"
+}

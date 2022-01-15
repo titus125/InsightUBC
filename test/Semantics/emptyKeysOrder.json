@@ -1,0 +1,23 @@
+{
+    "title": "Order with empty keys",
+    "query": {
+        "WHERE": {
+            "LT": {
+                "rooms_seats": 20
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lon",
+                "rooms_fullname",
+                "rooms_href"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": []
+            }
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

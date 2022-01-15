@@ -1,0 +1,40 @@
+{
+    "title": "columns into audit",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 85
+                            }
+                        },
+                        {
+                            "LT": {
+                                "courses_avg": 85.3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "IS": {
+                        "courses_uuid": "91454"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title"
+            ],
+            "ORDER": "courses_title"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_title": "third-year russ"
+        }
+    ]
+}

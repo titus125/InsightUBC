@@ -1,0 +1,36 @@
+{
+    "title": "empty idstring",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "_avg": 85
+                            }
+                        },
+                        {
+                            "LT": {
+                                "_avg": 86
+                            }
+                        }
+                    ]
+                },
+                {
+                    "IS": {
+                        "_instructor": "grant, edward"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "_title"
+            ],
+            "ORDER": "_title"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

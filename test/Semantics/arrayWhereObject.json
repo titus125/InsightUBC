@@ -1,0 +1,21 @@
+{
+    "title": "Array WHERE object",
+    "query": {
+        "WHERE": [],
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lon",
+                "rooms_fullname",
+                "rooms_href"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "rooms_lon"
+                ]
+            }
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

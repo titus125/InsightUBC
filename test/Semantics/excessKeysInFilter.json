@@ -1,0 +1,30 @@
+{
+    "title": "Invalid: Excess keys in query",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "rooms_lat": 49.268
+            }
+        },
+        "excess": {
+            "LT": {
+                "rooms_lon": -123.240
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lat",
+                "rooms_lon"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "rooms_lat",
+                    "rooms_lon"
+                ]
+            }
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}
