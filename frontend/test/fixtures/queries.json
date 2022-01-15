@@ -1,0 +1,607 @@
+{
+    "query1":{"WHERE": {"IS": {"courses_dept": "cpsc"} }, "OPTIONS": {"COLUMNS": ["courses_dept", "courses_id"], "ORDER": "courses_id"} },
+    "query2":{
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 90
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "adhe"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "query3": {
+        "WHERE": {
+            "OR": [
+                {
+                    "LT": {
+                        "courses_avg": 40
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_avg": 99
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "query4": {
+        "WHERE": {
+            "NOT": {
+                "GT": {"courses_avg": 20}
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "query5": {
+        "WHERE": {
+            "NOT": {
+                "GT": {"courses_avg": 20}
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "query6": {
+        "WHERE": {
+            "NOT": {
+                "NOT": {
+                    "EQ": {
+                        "courses_avg": 97
+                    }
+                }
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_audit",
+                "courses_avg"
+            ],
+            "ORDER": "courses_audit"
+        }
+    },
+    "query7": {
+        "WHERE": {
+            "EQ": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "courses_dept"
+                ]
+            }
+        }
+    },
+    "query8": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "courses_dept", "courses_avg"
+                ]
+            }
+        }
+    },
+    "query9": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "numSections",
+                "maxPass"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": ["courses_dept", "maxPass"]}
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["courses_dept", "courses_id"],
+            "APPLY": [
+                {"maxPass": {"MAX": "courses_pass"}},
+                {"numSections": {"COUNT": "courses_uuid"}}
+            ]
+        }
+    },
+    "query10": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_furniture",
+                "rooms_shortname"
+
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_furniture",
+                    "rooms_shortname"
+
+                ]
+            }
+        }
+    },
+    "query11": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_address",
+                "totalSeats"
+            ],
+            "ORDER": "rooms_address"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_address"
+            ],
+            "APPLY": [
+                {
+                    "totalSeats": {
+                        "SUM": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "query12": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_furniture",
+                "rooms_shortname",
+                "maxSeats",
+                "countSeats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_shortname",
+                    "maxSeats"
+
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_furniture",
+                "rooms_shortname"
+            ],
+            "APPLY": [
+                {
+                    "maxSeats": {
+                        "MAX": "rooms_seats"
+                    }
+                },
+                {
+                    "countSeats": {
+                        "COUNT": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "query13":{"WHERE": {"EQ": {"rooms_seats": 100} }, "OPTIONS": {"COLUMNS": ["rooms_seats", "rooms_shortname"], "ORDER": "rooms_shortname"} },
+    "query14":{
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "rooms_seats": 100
+                    }
+                },
+                {
+                    "IS": {
+                        "rooms_shortname": "WOOD"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_seats", "rooms_shortname"
+            ],
+            "ORDER": "rooms_shortname"
+        }
+    },
+    "query15": {
+        "WHERE": {
+            "OR": [
+                {
+                    "GT": {
+                        "rooms_seats": 400
+                    }
+                },
+                {
+                    "LT": {
+                        "rooms_seats": 10
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_seats", "rooms_shortname"
+            ],
+            "ORDER": "rooms_shortname"
+        }
+    },
+    "query16": {
+        "WHERE": {
+            "NOT": {
+                "GT": {"rooms_seats": 20}
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_seats",
+                "rooms_shortname"
+            ],
+            "ORDER": "rooms_seats"
+        }
+    },
+    "query17": {
+        "WHERE": {
+            "OR": [
+                {
+                    "GT": {
+                        "rooms_seats": 400
+                    }
+                },
+                {
+                    "LT": {
+                        "rooms_seats": 10
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_furniture",
+                "rooms_name",
+                "rooms_seats",
+                "rooms_shortname",
+                "maxSeats",
+                "countSeats"
+
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_shortname",
+                    "maxSeats",
+                    "countSeats"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_address",
+                "rooms_furniture",
+                "rooms_name",
+                "rooms_seats",
+                "rooms_shortname"
+            ],
+            "APPLY": [
+                {
+                    "maxSeats": {
+                        "MAX": "rooms_seats"
+                    }
+                },
+                {
+                    "countSeats": {
+                        "COUNT": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "query18": {
+        "WHERE": {
+            "LT": {
+                "courses_pass": 1
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_dept",
+                "courses_pass"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "courses_avg",
+                    "courses_pass"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_avg",
+                "courses_dept",
+                "courses_pass"
+            ],
+            "APPLY": []
+        }
+    },
+    "query19": {
+        "WHERE": {
+            "LT": {
+                "courses_pass": 1
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_pass"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": [
+                    "courses_avg",
+                    "courses_pass"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_avg",
+                "courses_dept",
+                "courses_pass"
+            ],
+            "APPLY": []
+        }
+    },
+    "query20": {
+        "WHERE": {
+            "NOT": {
+                "OR": [
+                    {
+                        "LT": {
+                            "courses_avg": 97
+                        }
+                    },
+                    {
+                        "IS": {
+                            "courses_dept": "epse"
+                        }
+                    }
+                ]
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_dept",
+                "courses_pass"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "query21": {
+        "WHERE": {
+            "NOT": {
+                "OR": [
+                    {
+                        "LT": {
+                            "courses_avg": 97
+                        }
+                    },
+                    {
+                        "IS": {
+                            "courses_dept": "10"
+                        }
+                    }
+                ]
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_dept",
+                "courses_pass"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "query22": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "countAudit"
+            ],
+            "ORDER": "courses_avg"
+
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_avg"
+            ],
+            "APPLY": [
+                {
+                    "countAudit": {
+                        "COUNT": "courses_audit"
+                    }
+                }
+            ]
+        }
+    },
+    "query23":{
+        "WHERE": {
+            "GT": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ]
+        }
+    },
+    "query24":{
+        "WHERE": {
+            "GT": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_dept"
+            ]
+        }
+    },
+    "query25":{
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 97
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "epse"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_dept"
+            ]
+        }
+    },
+    "query26": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_avg"
+            ],
+            "APPLY": [
+                {
+                    "countAudit": {
+                        "COUNT": "courses_audit"
+                    }
+                }
+            ]
+        }
+    },
+    "query51": {
+        "WHERE": {
+            "GT": {
+                "courses_audit": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_avg"
+            ],
+            "APPLY": [
+                {
+                    "countAudit": {
+                        "COUNT": "courses_audit"
+                    }
+                }
+            ]
+        }
+    },
+    "query52": {
+        "WHERE": {
+            "GT": {
+                "courses_audit": "cosWhyNot"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_avg"
+            ],
+            "APPLY": [
+                {
+                    "countAudit": {
+                        "COUNT": "courses_audit"
+                    }
+                }
+            ]
+        }
+    }
+}
